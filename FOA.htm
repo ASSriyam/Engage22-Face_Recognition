@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<?PHP
+        echo shell_exec("python recogn_face.py");
+    ?>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FOA</title>
+	<style>
+		.button{ border: none; padding: 20px 40px; text-align:center; border-radius: 8px; text-decoration: none; display: inline-block; font-size: 20px;transition-duration: 0.4s; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); width: 45%; }
+		.button:hover { background-color:rgba(255, 99, 71, 0.2); color:whitesmoke;}
+		.button:activate{background-color: #3e8e41; box-shadow: 0 5px #666; transform: translateY(4px);}
+	</style>
+	
+</head>
+<body style="background-color:rgba(255, 99, 71, 0.75);">
+<font style="color:white">
+<center>
+	<h1 style="color:black;">FOA</h1>
+	<hr style="color:rgb(128,128,128,0.75);" noshade="15px">
+	<br><br>
+	<h1><font size="90px">Virtual Attendance System</font></h1>
+	<h3>Taking Attendance has become much easier, smarter and efficient</h2>
+	<br><br><br>
+	<marquee direction="left" height="200" width="90%" hspace="15px" behaviour="slide"><img src="Attendance.jpg"><img src="student.jpg"><img src="student_fr.jpg"></marquee>
+	<marquee direction="left">Attendence can be taken using 2 simple steps: 1.The student has to be in front of the camera 2.The camera recognizes the face and attendence is marked</marquee>
+	<br><br><br>
+	<button class="button" action="/result"  method="POST" style="background-color:whitesmoke;" "color: rgba(255, 99, 71, 0.75);" onclick="exec('python recogn_face.py');">Take Attendance
+	</button>
+	<br><br><br>
+	<hr style="color:black;" noshade="30px" height="10%">
+	<h4>For Further Queries and Feedback</h4>
+	<br>
+	<button class="button" style="background-color:rgba(255, 99, 71, 0.75);" "color: whitesmoke;"><a href="mailto:foafeedback@gmail.com" style="color:white">Contact us</a></button>
+</center>
+</font>
+</body>
+</html>
